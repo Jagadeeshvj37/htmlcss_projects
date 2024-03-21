@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drop_Down</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .nav-container{
+        display: flex;
+        
+        color: white;
+        
+        justify-content: center;
+        margin-top: 70px;
+        list-style: none;
+    }
+    
+    .nav-container a{
+        display: block;
+        text-decoration: none;
+        text-align: center;
+        padding: 10px 0;
+        color: inherit;
+        width: 200px;
+        font-size: 1.3rem;
+        background-color: black;
+    }
+    a:hover{
+        background-color: lightblue;
+    }
+    .nav-dropdown{
+        list-style-type: none;
+        text-align: center;
+        display: none;
+        position: relative;
+    }
+    .nav-container li:nth-child(3):hover .nav-dropdown{
+        display: block;
+    }
+    .book-dropdown{
+        display: none;
+        list-style-type: none;
+    }
+    .nav-dropdown li:nth-child(3):hover .book-dropdown{
+        display: block;
+        position: absolute;
+        left: 50px;
+        transform: translateX(150px) translateY(-45px);
+        
+    }
+</style>
+<body>
+    <nav>
+        <ul class="nav-container">
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Product</a>
+            <ul class="nav-dropdown">
+                <li><a href="">Pen</a></li>
+                <li><a href="">Pencil</a></li>
+                <li><a href="">Books</a>
+                <ul class="book-dropdown">
+                    <li><a href="">Fun books</a></li>
+                    <li><a href="">History books</a></li>
+                    <li><a href="">Story books</a></li>
+                    <li><a href="">Puzzle books</a></li>
+                </ul>
+                </li>
+                <li><a href="">Box</a></li>
+            </ul>
+            </li>
+            <li><a href="">Contact</a></li>
+            
+        </ul>
+    </nav>
+</body>
+</html>
